@@ -23,8 +23,23 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function(l1, l2) {
+var addTwoNumbers = function (l1, l2) {
 
 };
 
-addTwoNumbers(l1,l2);
+var testBlock = function () {
+    let n = 0;
+    loop: {
+        for (let i = 0; i < 1000; i++) {
+            for (let j = 0; j < 4444; j++) {
+                if (i === 5 && j === 8) {
+                    n = i * j;
+                    break loop;
+                }
+            }
+        }
+    }
+    return n;
+}
+
+console.log(testBlock())
