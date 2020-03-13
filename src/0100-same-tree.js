@@ -50,6 +50,6 @@ var isSameTree = function(p, q) {
         }
         return `${root.val}<-${ser(root.left)}->${ser(root.right)}`;
     }
-    console.log(p.val,p.left,p.right);
+    
     return ser(p)===ser(q);
 };
