@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\src\\0300_longest-increasing-subsequence.js"
+            "program": "${workspaceFolder}\\src\\x-0322_coin-change.js"
         }
     ]
 }
