@@ -41,7 +41,7 @@ var coinChange = function (coins, amount) {
             prevMin = Number.MAX_SAFE_INTEGER;
 
         for (let i = 0; i < coins.length; i++) {
-            if (typeof (prevMap.get(amount - coins[i])) === "number") {
+            if (prevMap.has(amount - coins[i])) {
                 prevDp = prevMap.get(amount - coins[i])
             } else {
                 prevDp = dp(coins, amount - coins[i]);
@@ -51,7 +51,7 @@ var coinChange = function (coins, amount) {
             }
         }
         if (prevMin === Number.MAX_SAFE_INTEGER) {
-            prevMap.set(amount, -1); // i don't understand why it'll low the performance if comment this line, it's weird.
+            prevMap.set(amount, -1); // this will stop the further recursion at line 47, so will improve the performance when huge amount
             return -1;
         } else {
             prevMap.set(amount, prevMin + 1);
@@ -73,9 +73,3 @@ console.log(coinChange([1, 5, 11], 0), 0);
 console.log(coinChange([1, 5, 11], 15), 3);
 console.log(coinChange([186, 419, 83, 408], 6249), 20);
 console.log(coinChange([186, 419, 83, 408], 7076), 18);
-// let m = new Map();
-// m.set(2,22);
-// m.set(3.33);
-
-// console.log(m.get(2));
-// console.log(m.get(2));
