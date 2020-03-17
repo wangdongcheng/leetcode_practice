@@ -64,30 +64,4 @@ var isValid = function(s) {
     }
 
     return true;
-
-    // const l1 = '(';
-    // const r1 = ')';
-    // const l2 = '[';
-    // const r2 = ']';
-    // const l3 = '{';
-    // const r3 = '}';
-
-    // if(s.length % 2 != 0){
-    //     return false;
-    // }
-    // var stack = [];
-
-    // for(let i=0;i<s.length;i++){
-    //     if(s[i]===l1 || s[i]===l2 || s[i]===l3){
-    //         stack.push(s[i]);
-    //     }else if((s[i] === r1 && stack[stack.length-1] === l1) ||
-    //              (s[i] === r2 && stack[stack.length-1] === l2) ||
-    //              (s[i] === r3 && stack[stack.length-1] === l3)) {     
-    //                stack.pop();
-    //                }
-    // }
-    // if(stack.length === 0){
-    //     return true;
-    // }
-    // return false;
 }
