@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\src\\1160_find-words-that-can-be-formed-by-characters"
+            "program": "${workspaceFolder}\\src\\x-0102_Binary Tree Level Order Traversal"
         }
     ]
 }
