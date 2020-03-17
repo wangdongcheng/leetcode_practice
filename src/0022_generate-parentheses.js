@@ -78,3 +78,5 @@ var generateParenthesis = function (n) {
     }
     return result;
 };
+
+console.log(generateParenthesis(8));
