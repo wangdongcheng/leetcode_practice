@@ -1,4 +1,4 @@
-// 5356. Lucky Numbers in a Matrix 显示英文描述 
+// 5356. Lucky Numbers in a Matrix
 
 // Given a m * n matrix of distinct numbers, return all lucky numbers in the matrix in any order.
 
