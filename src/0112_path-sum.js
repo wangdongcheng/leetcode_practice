@@ -38,12 +38,8 @@ var hasPathSum = function (root, sum) {
         return true;
     } else if (!root.left && !root.right && root.val != sum) {
         return false;
-    } else if (!root.left && root.right) {
-        return (hasPathSum(root.right, sum - root.val));
-    } else if (root.left && !root.right) {
-        return (hasPathSum(root.left, sum - root.val));
     } else {
-        return (hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val));
+        return ((root.left ? hasPathSum(root.left, sum - root.val) : false) || (root.right ? hasPathSum(root.right, sum - root.val) : false));
     }
 };
 
