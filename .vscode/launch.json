@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\src\\x-0102_Binary Tree Level Order Traversal"
+            "program": "${workspaceFolder}\\src\\x-0101_symmetric-tree"
         }
     ]
 }
