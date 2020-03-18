@@ -32,7 +32,9 @@ const tree = require("../module/binary_tree");
  */
 var hasPathSum = function (root, sum) {
 
-    if (root && root.val === sum) {
+    if (!root) {
+        return false;
+    } else if (!root.left && !root.right && root && root.val === sum) {
         return true;
     } else if (!root.left && !root.right && root.val != sum) {
         return false;
@@ -41,9 +43,13 @@ var hasPathSum = function (root, sum) {
     } else if (root.left && !root.right) {
         return (hasPathSum(root.left, sum - root.val));
     } else {
-        return (hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.value));
+        return (hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val));
     }
-
 };
 
-console.log(hasPathSum(tree.getTreeFromLayerOrderArray([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1], 22), true));
+console.log(hasPathSum(tree.getTreeFromLayerOrderArray([]), 0), false);
+console.log(hasPathSum(tree.getTreeFromLayerOrderArray([1, 2]), 1), false);
+console.log(hasPathSum(tree.getTreeFromLayerOrderArray([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1]), 22), true);
+console.log(hasPathSum(tree.getTreeFromLayerOrderArray([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1]), 28), false);
+console.log(hasPathSum(tree.getTreeFromLayerOrderArray([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1, 84, 3, -9, 2, 7, null, 1]), 13), true);
+console.log(hasPathSum(tree.getTreeFromLayerOrderArray([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1, 84, 3, -9, 2, 7, null, 1]), 14), false);
