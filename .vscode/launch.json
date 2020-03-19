@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/0112_path-sum"
+            "program": "${workspaceFolder}/src/0409_longest-palindrome"
         }
     ]
 }
