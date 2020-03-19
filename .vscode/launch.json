@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/0409_longest-palindrome"
+            "program": "${workspaceFolder}/src/0106_construct-binary-tree-from-inorder-and-postorder-traversal"
         }
     ]
 }
