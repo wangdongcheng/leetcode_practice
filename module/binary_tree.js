@@ -22,5 +22,24 @@ module.exports = {
             if (top.right) queue.push(top.right);
         }
         return root;
+    },
+
+    getLayerOrderArrayFromTree: function (root) {
+        let res = [];
+        let que = [root];
+        while (que.length) {
+            let len = que.length;
+            for (let i = 0; i < len; i++) {
+                let cur = que.shift();
+                if (cur) {
+                    res.push(cur.val);
+                    que.push(cur.left, cur.right);
+                } else {
+                    res.push(null);
+                }
+            }
+        }
+        while (res.length > 1 && res[res.length - 1] == null) res.pop(); // 删掉结尾的 null
+        return res;
     }
 }
