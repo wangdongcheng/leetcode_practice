@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/0106_construct-binary-tree-from-inorder-and-postorder-traversal"
+            "program": "${workspaceFolder}/src/inv_0040_zui-xiao-de-kge-shu-lcof"
         }
     ]
 }
