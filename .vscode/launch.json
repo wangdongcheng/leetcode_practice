@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/inv_0040_zui-xiao-de-kge-shu-lcof"
+            "program": "${workspaceFolder}/src/0297_serialize-and-deserialize-binary-tree"
         }
     ]
 }
