@@ -22,8 +22,8 @@ var majorityElement = function (nums) {
     }
     nums.sort(function (a, b) { return a - b });
     let mid = Math.floor(nums.length / 2);
-    console.log(nums,mid);
+    console.log(nums, mid);
 
-    return nums[mid]; 
+    return nums[mid];
 
 };
