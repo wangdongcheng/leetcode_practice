@@ -4,8 +4,6 @@
 
 // A lucky number is an element of the matrix such that it is the minimum element in its row and maximum in its column.
 
-
-
 // Example 1:
 
 // Input: matrix = [[3,7,8],[9,11,13],[15,16,17]]
@@ -47,9 +45,7 @@ var luckyNumbers = function (matrix) {
 
         colArr = [];
         for (let j = 0; j < matrix.length; j++) {
-
             colArr.push(matrix[j][rowMinCord]);
-
         }
         colMax = Math.max(...colArr);
         if (rowMin === colMax) {
