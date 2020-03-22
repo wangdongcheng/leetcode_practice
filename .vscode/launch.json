@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0297_serialize-and-deserialize-binary-tree"
+            "program": "${workspaceFolder}/src/x-0042_trapping-rain-water"
         }
     ]
 }
