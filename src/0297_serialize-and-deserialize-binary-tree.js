@@ -49,26 +49,54 @@ var serialize = function (root) {
  * @return {TreeNode}
  */
 var deserialize = function (data) {
+    if (data.length === 0 || data === ".") return null;
+
     let numStr = "",
-        root = new TreeNode(),
-        bal = 0;
+        root = new tree.TreeNode(),
+        bal = 0,
+        leftIdx = 0,
+        rightIdx = 0,
+        leftTreeSer = "",
+        rightTreeSer = "";
 
     for (let i = 0; i < data.length; i++) {
-        if(data[i] === "<" || data[i] === ">" ){
-            root.val = parseInt(numStr);
-            numStr = "";
-        } else {
+        if (data[i] === "<" || data[i] === ">") {
+            if (numStr != "END") {
+                if (numStr != ".") {
+                    root.val = parseInt(numStr);
+                } else {
+                    return root;
+                }
+                numStr = "END";
+            }
+
+            if (data[i] === "<") {
+                bal++;
+                if (leftIdx === 0) leftIdx = i + 1;
+            } else if (data[i] === ">") {
+                bal--;
+            }
+
+            if (bal === 0 && rightIdx === 0) rightIdx = i + 1;
+
+        } else if (numStr != "END") {
             numStr += data[i];
         }
-        
     }
+    leftTreeSer = data.substring(leftIdx, rightIdx - 1);
+    rightTreeSer = data.substring(rightIdx, data.length);
+
+    root.left = deserialize(leftTreeSer);
+    root.right = deserialize(rightTreeSer);
+
+    return root;
 };
 
 
-deserialize("3<-5<6<.>98<52<.>.>-41<.>.>2<87<74<.>.>.>45<7<.>.>4<.>.>1<0<21<.>.>36<.>.>8<96<.>.>85<.>.");
-// console.log(serialize(tree.getTreeFromLayerOrderArray([3, 5, 1, 6, 2, 0, 8, null, 98, 87, 45, 21, 36, 96, 85, 52, 41, 74, null, 7, 4])));
-// console.log(serialize(tree.getTreeFromLayerOrderArray([1, 2, 3, null, null, 4, 5])));
-// console.log(serialize(tree.getTreeFromLayerOrderArray([1, null, 2, null, 3, null, 3, 5, 6, 7])));
+console.log(tree.getLayerOrderArrayFromTree(deserialize(serialize(tree.getTreeFromLayerOrderArray([3, -5, 1, 6, 2, 0, 8, null, 98, 87, 45, 21, 36, 96, 85, 52, -41, 74, null, 7, 4])))));
+// console.log(deserialize(serialize(tree.getTreeFromLayerOrderArray([3, 5, 1, 6, 2, 0, 8, null, 98, 87, 45, 21, 36, 96, 85, 52, 41, 74, null, 7, 4]))));
+// console.log(deserialize(serialize(tree.getTreeFromLayerOrderArray([1, 2, 3, null, null, 4, 5]))));
+console.log(tree.getLayerOrderArrayFromTree(deserialize(serialize(tree.getTreeFromLayerOrderArray([1, null, 2, null, 3, null, 3, 5, 6, 7])))));
 /**
  * Your functions will be called as such:
  * deserialize(serialize(root));

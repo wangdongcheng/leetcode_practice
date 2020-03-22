@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/0945_minimum-increment-to-make-array-unique"
+            "program": "${workspaceFolder}/src/x-0297_serialize-and-deserialize-binary-tree"
         }
     ]
 }
