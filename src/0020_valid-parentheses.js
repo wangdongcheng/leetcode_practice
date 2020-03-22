@@ -33,32 +33,32 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-    if(s.length % 2 != 0){
+var isValid = function (s) {
+    if (s.length % 2 != 0) {
         return false;
     }
-    let bit=0,tmp;
-    for(let i=0;i<s.length;i++){
-        if((s[i]==='(')||(s[i]===')')){
+    let bit = 0, tmp;
+    for (let i = 0; i < s.length; i++) {
+        if ((s[i] === '(') || (s[i] === ')')) {
             tmp = 1;
-        }else if((s[i]==='[')||(s[i]===']')){
+        } else if ((s[i] === '[') || (s[i] === ']')) {
             tmp = 2;
-        }else if((s[i]==='{')||(s[i]==='}')){
+        } else if ((s[i] === '{') || (s[i] === '}')) {
             tmp = 3;
         }
-        console.log('before',bit);
+        console.log('before', bit);
         bit = bit ^ tmp;
-        console.log('after',bit);
-        console.log(s[i]+s[0]);
-        if((bit===0)
-        &&(s[i]+s[0]!=')(')&&(s[i]+s[0]!='][')&&(s[i]+s[0]!='}{')
-        &&(s[i]+s[i-1]!=')(')&&(s[i]+s[i-1]!='][')&&(s[i]+s[i-1]!='}{')
-        &&(s.length>0)){
+        console.log('after', bit);
+        console.log(s[i] + s[0]);
+        if ((bit === 0)
+            && (s[i] + s[0] != ')(') && (s[i] + s[0] != '][') && (s[i] + s[0] != '}{')
+            && (s[i] + s[i - 1] != ')(') && (s[i] + s[i - 1] != '][') && (s[i] + s[i - 1] != '}{')
+            && (s.length > 0)) {
             return false;
         }
     }
 
-    if (bit!=0) {
+    if (bit != 0) {
         // console.log('bingo3');
         return false;
     }
