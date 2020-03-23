@@ -48,10 +48,12 @@ var reverseList = function (head) {
     if (!head) return null;
     if (head && !head.next) return head;
     if (head && head.next) {
-        let ret = reverseList(head.next);
-        ret.next = null;
-        head = reverseList(head.next)
-        
+        let ret = node = reverseList(head.next);
+        while (node.next) {
+            node = node.next;
+        }
+        node.next = head;
+        head.next = null;
 
         return ret;
     }
@@ -61,4 +63,6 @@ const log = arr => {
     console.log(list.getArrayFromList(reverseList(list.getListFromArray(arr))));
 }
 
-log([1, 2, 3, 4, 5]);
+log([1, 2, 3, 4, 5, 6, 7, 5, 3, 34, 5, 6, 3]);
+log([]);
+log([33,44]);
