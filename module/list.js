@@ -4,7 +4,6 @@ module.exports = {
     },
 
     /**
-     * 链表节点
      * @param {*} val
      * @param {ListNode} next
      */
@@ -14,7 +13,6 @@ module.exports = {
     },
 
     /**
-     * 将一个数组转为链表
      * @param {array} a
      * @return {ListNode}
      */
@@ -25,7 +23,6 @@ module.exports = {
         return dummy.next;
     },
     /**
-     * 将一个链表转为数组
      * @param {ListNode} node
      * @return {array}
      */
@@ -38,7 +35,6 @@ module.exports = {
         return a;
     },
     /**
-     * 打印一个链表
      * @param {ListNode} node 
      */
     logList: function (node) {

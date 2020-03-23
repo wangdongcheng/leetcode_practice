@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-5349_cinema-seat-allocation"
+            "program": "${workspaceFolder}/src/0024_swap-nodes-in-pairs"
         }
     ]
 }
