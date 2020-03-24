@@ -92,13 +92,18 @@ var deserialize = function (data) {
     return root;
 };
 
+const log = arr => {
+    console.log(tree.getLayerOrderArrayFromTree(deserialize(serialize(tree.getTreeFromLayerOrderArray(arr)))));
+};
 
-console.log(tree.getLayerOrderArrayFromTree(deserialize(serialize(tree.getTreeFromLayerOrderArray([3, -5, 1, 6, 2, 0, 8, null, 98, 87, 45, 21, 36, 96, 85, 52, -41, 74, null, 7, 4])))));
-// console.log(deserialize(serialize(tree.getTreeFromLayerOrderArray([3, 5, 1, 6, 2, 0, 8, null, 98, 87, 45, 21, 36, 96, 85, 52, 41, 74, null, 7, 4]))));
-// console.log(deserialize(serialize(tree.getTreeFromLayerOrderArray([1, 2, 3, null, null, 4, 5]))));
-console.log(tree.getLayerOrderArrayFromTree(deserialize(serialize(tree.getTreeFromLayerOrderArray([1, null, 2, null, 3, null, 3, 5, 6, 7])))));
 /**
  * Your functions will be called as such:
  * deserialize(serialize(root));
  */
+
+log([3, -5, 1, 6, 2, 0, 8, null, 98, 87, 45, 21, 36, 96, 85, 52, -41, 74, null, 7, 4]);
+log([3, 5, 1, 6, 2, 0, 8, null, 98, 87, 45, 21, 36, 96, 85, 52, 41, 74, null, 7, 4]);
+log([]);
+log([1, 2, 3, null, null, 4, 5]);
+log([1, null, 2, null, 3, null, 3, 5, 6, 7]);
 
