@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/0994_rotting-oranges"
+            "program": "${workspaceFolder}/src/x-0994_rotting-oranges"
     ]
 }
