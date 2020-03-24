@@ -17,5 +17,19 @@
  * @return {number[]}
  */
 var getRow = function(rowIndex) {
+    if (rowIndex === 0) return [1];
+    if (rowIndex === 1) return [1,1];
 
+    let prevRow = getRow(rowIndex - 1),
+        curr = [];
+
+    curr.push(1);
+    prevRow.forEach((val, idx, arr) => {
+        if (idx > 0) curr.push(val + arr[idx - 1]);
+    });
+    curr.push(1);
+    
+    return curr;
 };
+
+console.log(getRow(11));

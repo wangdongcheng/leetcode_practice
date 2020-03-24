@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/5349_cinema-seat-allocation"
+            "program": "${workspaceFolder}/src/0994_rotting-oranges"
     ]
 }
