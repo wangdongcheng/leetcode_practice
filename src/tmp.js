@@ -1,1 +1,5 @@
-console.log(1^2^3^4);
+const pow = (x, y) => {
+    return x << y;
+}
+
+console.log(Number.MIN_SAFE_INTEGER);

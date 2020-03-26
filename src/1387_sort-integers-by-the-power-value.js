@@ -1,4 +1,4 @@
-// 5350. Sort Integers by The Power Value
+// 1387. Sort Integers by The Power Value
 
 // The power of an integer x is defined as the number of steps needed to transform x into 1 using the following steps:
 

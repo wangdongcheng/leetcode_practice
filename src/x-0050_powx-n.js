@@ -24,6 +24,44 @@
  * @param {number} n
  * @return {number}
  */
-var myPow = function(x, n) {
+var myPow_1 = function (x, n) {
+    // what a shame
+    return Math.pow(x, n);
+};
+
+var myPow = function (x, n) {
+    if (n < 0) {
+        x = 1 / x;
+        n = -1 * n;
+    }
+    
+    let dp = new Array(n + 1);
+    dp[0] = 1;
+    dp[1] = x;
+
+    for (let i = 2; i <= n; i++) {
+        if ((i & 1) === 0) {
+            dp[i] = (dp[i / 2] * dp[i / 2]).toFixed(20);
+        } else {
+            dp[i] = (dp[(i - 1) / 2] * dp[(i - 1) / 2] * x).toFixed(20);
+        }
+        if (dp[i] === 0) return 0;
+    }
+    return dp[n];
+
+    // const fastPow = (x, n) => {
+    //     if (n === 1) return x;
+    //     if (n === -1) return 1 / x;
+    //     if (n === 0) return 1;
+
+    //     if ((n & 1) === 0) {
+    //         return fastPow(x, n / 2) * fastPow(x, n / 2);
+    //     } else {
+    //         return fastPow(x, (n - 1) / 2) * fastPow(x, (n - 1) / 2) * x;
+    //     }
+    // }
 
 };
+
+console.log(myPow(88, -5));
+console.log(myPow(0.00001, 2147483647));//TLE

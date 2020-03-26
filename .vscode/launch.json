@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0999_available-captures-for-rook"
+            "program": "${workspaceFolder}/src/x-0050_powx-n"
     ]
 }

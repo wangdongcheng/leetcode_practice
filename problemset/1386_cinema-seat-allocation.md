@@ -1,4 +1,4 @@
-5349. Cinema Seat Allocation 
+1386. Cinema Seat Allocation 
 
 ![](mdImg/2020-03-22-00-08-12.png)
 
