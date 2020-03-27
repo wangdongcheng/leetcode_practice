@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0050_powx-n"
+            "program": "${workspaceFolder}/src/0914_x-of-a-kind-in-a-deck-of-cards"
     ]
 }
