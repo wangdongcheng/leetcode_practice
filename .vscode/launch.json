@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0622_design-circular-queue"
+            "program": "${workspaceFolder}/src/x-0200_number-of-islands"
     ]
 }
