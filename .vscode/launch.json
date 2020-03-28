@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0820_short-encoding-of-words"
+            "program": "${workspaceFolder}/src/x-0622_design-circular-queue"
     ]
 }
