@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0200_number-of-islands"
+            "program": "${workspaceFolder}/src/x-1162_As Far from Land as Possible"
     ]
 }
