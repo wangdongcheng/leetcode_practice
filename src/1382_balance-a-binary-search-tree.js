@@ -23,17 +23,22 @@ var balanceBST = function (root) {
     }
     travel(root);
     treeArr.sort((a, b) => a - b);
+    console.log(treeArr);
 
     const buildTree = arr => {
         if (arr.length === 0) return null;
         if (arr.length === 1) return new tree.TreeNode(arr[0]);
 
+        let len = arr.length,
+            mid = Math.floor(len / 2)
+        midVal = arr[mid];
+
         let balanceTree = new tree.TreeNode();
-        balanceTree.val = arr[1];
-        let leftArr = [];
-        leftArr.push(arr[0]);
+        balanceTree.val = midVal;
+        let leftArr = arr.slice(0, mid);
         balanceTree.left = buildTree(leftArr);
-        let rightArr = arr.splice(2, arr.length - 1);
+
+        let rightArr = arr.slice(mid + 1, len);
         balanceTree.right = buildTree(rightArr);
 
         return balanceTree;
@@ -47,9 +52,7 @@ const log = arr => {
 }
 
 log([1, null, 2, null, 3, null, 4, null, null]);
-
-// 输入:
-// [1,null,15,14,17,7,null,null,null,2,12,null,3,9,null,null,null,null,11]
+log([1, null, 15, 14, 17, 7, null, null, null, 2, 12, null, 3, 9, null, null, null, null, 11]);
 // 输出
 // [2,1,7,null,null,3,11,null,null,9,14,null,null,12,17,null,null,15]
 // 预期结果

@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-1162_As Far from Land as Possible"
+            "program": "${workspaceFolder}/src/x-1382_balance-a-binary-search-tree"
     ]
 }

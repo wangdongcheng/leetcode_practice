@@ -37,6 +37,12 @@
  * @param {string} target
  * @return {number}
  */
-var openLock = function(deadends, target) {
+var openLock = function (deadends, target) {
+    if (target === "0000") return 0;
+    if (deadends.indexOf("0000" != -1)) return -1;
+    
+    let step = 0;
+
+
 
 };
