@@ -23,7 +23,6 @@ var balanceBST = function (root) {
     }
     travel(root);
     treeArr.sort((a, b) => a - b);
-    console.log(treeArr);
 
     const buildTree = arr => {
         if (arr.length === 0) return null;

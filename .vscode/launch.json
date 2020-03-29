@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-1382_balance-a-binary-search-tree"
+            "program": "${workspaceFolder}/src/x-0095_unique-binary-search-trees-ii"
     ]
 }

@@ -21,6 +21,7 @@
 //     /     /       \                 \
 //    2     1         2                 3
 
+const tree = require("../module/binary_tree");
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -32,6 +33,69 @@
  * @param {number} n
  * @return {TreeNode[]}
  */
-var generateTrees = function(n) {
+var generateTrees = function (n) {
 
+    const buildTreeArr = (arr) => {
+        let treeArr = [],
+            t = new tree.TreeNode();
+                                                                                                                                   
+        if (arr.length === 1) {
+            t.val = arr[0];
+            treeArr.push(t);
+            return treeArr;
+        } else if (arr.length === 2) {                                                                
+            t.val = arr[1];
+            t.left = new tree.TreeNode(arr[0]);
+            treeArr.push(t);
+            t = new tree.TreeNode(arr[0]);
+            t.right = new tree.TreeNode(arr[1]);
+            treeArr.push(t);
+            return treeArr;
+        }
+
+        arr.forEach((val, idx, array) => {
+            t.val = val;
+            leftTreeArr = buildTreeArr(array.slice(0, idx));
+            rightTreeArr = buildTreeArr(array.slice(idx + 1, array.length));
+
+            if (leftTreeArr.length && rightTreeArr.length) {
+                leftTreeArr.forEach(leftNode => {
+                    rightTreeArr.forEach(rightNode => {
+                        if (leftNode) t.left = leftNode;
+                        if (rightNode) t.right = rightNode;
+                        treeArr.push(t);
+                        t = new tree.TreeNode(val);
+                    })
+                });
+            } else if (leftTreeArr.lenth && !rightTreeArr.length) {
+                leftTreeArr.forEach(leftNode => {
+                    if (leftNode) t.left = leftNode;
+                    treeArr.push(t);
+                    t = new tree.TreeNode(val);
+                });
+            } else if (!leftTreeArr.length && rightTreeArr.length) {
+                rightTreeArr.forEach(rightNode => {
+                    if (rightNode) t.right = rightNode;
+                    treeArr.push(t);
+                    t = new tree.TreeNode(val);
+                });
+            }
+        })
+        return treeArr;
+    }
+
+    let nArr = [];
+    for (let i = 1; i <= n; i++) {
+        nArr.push(i);
+    }
+    return buildTreeArr(nArr);
 };
+
+const log = n => {
+    generateTrees(n).forEach(val => {
+        console.log(tree.getLayerOrderArrayFromTree(val));
+    });
+}
+
+// log(3);
+// log(4);
