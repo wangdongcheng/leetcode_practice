@@ -62,7 +62,7 @@ console.log(lastRemaining(10, 17), 2);
 console.log(lastRemaining(1000, 999), 333);
 
 
-// the fastest js sample, 60ms, DP method
+// the fastest js sample, 60ms.
 // It has been proven by math that:
 // 约瑟夫问题（有时也称为约瑟夫斯置换），是一个出现在计算机科学和数学中的问题。在计算机编程的算法中，类似问题又称为约瑟夫环。
 // f(n,k) = (f(n-1,k) + k) mod n, f(1,k) = 0
