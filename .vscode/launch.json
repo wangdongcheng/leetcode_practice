@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0095_unique-binary-search-trees-ii"
+            "program": "${workspaceFolder}/src/intv_0062_yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof"
     ]
 }
