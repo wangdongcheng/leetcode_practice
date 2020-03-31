@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0912_sort-an-array"
+            "program": "${workspaceFolder}/src/x-0752_open-the-lock"
     ]
 }
