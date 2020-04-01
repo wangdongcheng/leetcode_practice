@@ -5,7 +5,7 @@
 // pop() -- Removes the element on top of the stack.
 // top() -- Get the top element.
 // getMin() -- Retrieve the minimum element in the stack.
- 
+
 
 // Example:
 // MinStack minStack = new MinStack();
@@ -20,37 +20,41 @@
 /**
  * initialize your data structure here.
  */
-var MinStack = function() {
-
+var MinStack = function () {
+    this.st = [];
+    this.sorted = [];
 };
 
 /** 
  * @param {number} x
  * @return {void}
  */
-MinStack.prototype.push = function(x) {
-
+MinStack.prototype.push = function (x) {
+    this.st.push(x)
+    this.sorted.push(x);
+    this.sorted.sort((a, b) => a - b);
 };
 
 /**
  * @return {void}
  */
-MinStack.prototype.pop = function() {
-
+MinStack.prototype.pop = function () {
+    const p = this.st.pop();
+    this.sorted.splice(this.sorted.indexOf(p), 1);
 };
 
 /**
  * @return {number}
  */
-MinStack.prototype.top = function() {
-
+MinStack.prototype.top = function () {
+    return this.st[this.st.length - 1];
 };
 
 /**
  * @return {number}
  */
-MinStack.prototype.getMin = function() {
-
+MinStack.prototype.getMin = function () {
+    return this.sorted[0];
 };
 
 /**

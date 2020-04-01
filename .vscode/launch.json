@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/0020_valid-parentheses"
+            "program": "${workspaceFolder}/src/x-0150_evaluate-reverse-polish-notation"
     ]
 }
