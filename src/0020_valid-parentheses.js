@@ -67,6 +67,7 @@ var isValid = function (s) {
 }
 
 const isValid_20200401 = s => {
+    if (s.length & 1 === 1) return false;
     if (s[0] === ")" || s[0] === "]" || s[0] === "}") return false;
     if (s[s.length - 1] === "(" || s[s.length - 1] === "[" || s[s.length - 1] === "{") return false;
     let st = [],

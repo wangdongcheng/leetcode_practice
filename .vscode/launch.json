@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0150_evaluate-reverse-polish-notation"
+            "program": "${workspaceFolder}/src/x-0133_clone-graph"
     ]
 }
