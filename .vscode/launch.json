@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0279_perfect-squares"
+            "program": "${workspaceFolder}/src/0020_valid-parentheses"
     ]
 }

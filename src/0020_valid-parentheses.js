@@ -65,3 +65,29 @@ var isValid = function (s) {
 
     return true;
 }
+
+const isValid_20200401 = s => {
+    if (s[0] === ")" || s[0] === "]" || s[0] === "}") return false;
+    if (s[s.length - 1] === "(" || s[s.length - 1] === "[" || s[s.length - 1] === "{") return false;
+    let st = [],
+        le = "([{",
+        ri = ")]}";
+
+    for (let i = 0; i < s.length; i++) {
+        const it = s[i];
+        if ((it === ri[0] && st[st.length - 1] === le[0]) || (it === ri[1] && st[st.length - 1] === le[1]) || (it === ri[2] && st[st.length - 1] === le[2])) {
+            st.pop();
+        } else {
+            st.push(it);
+        }
+    }
+    if (!st.length) return true;
+    return false;
+}
+
+console.log(isValid_20200401("(])"), false);
+console.log(isValid_20200401("()"), true);
+console.log(isValid_20200401("()[]{}"), true);
+console.log(isValid_20200401("(]"), false);
+console.log(isValid_20200401("([)]"), false);
+console.log(isValid_20200401("([][][][][]{}[]{[[]]})"), true);
