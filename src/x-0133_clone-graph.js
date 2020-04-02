@@ -26,6 +26,7 @@ const getNodeFromArray = arr => {
 }
 
 const getArrayFromNode = node => {
+    let visited = [];
     
 }
 
