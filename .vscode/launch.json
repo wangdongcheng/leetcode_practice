@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0289_game-of-life"
+            "program": "${workspaceFolder}/src/x-0494_target-sum"
     ]
 }
