@@ -45,10 +45,20 @@
  * @return {number}
  */
 var myAtoi = function (str) {
-    const re = /^\s*[+-]?\d+/;
+    // 1. use regex, 
+    if (false) {
+        const re = /^\s*[+-]?\d+/;
+        const MAX = 2147483647;
+        const MIN = -2147483648;
+        let ret = str.match(re) ? parseInt(str.match(re)[0], 10) : 0;
+        if (ret > MAX) ret = MAX;
+        if (ret < MIN) ret = MIN;
+        return ret;
+    }
+    // actually parseInt() method could cover the usage of Regex
+    let ret = !isNaN(parseInt(str, 10)) ? parseInt(str, 10) : 0;
     const MAX = 2147483647;
     const MIN = -2147483648;
-    let ret = str.match(re) ? parseInt(str.match(re)[0], 10) : 0;
     if (ret > MAX) ret = MAX;
     if (ret < MIN) ret = MIN;
     return ret;

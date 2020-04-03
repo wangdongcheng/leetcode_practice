@@ -23,8 +23,9 @@
 /**
  * Initialize your data structure here.
  */
-var MyQueue = function() {
-
+var MyQueue = function () {
+    this.st = [];
+    this.reSt = [];
 };
 
 /**
@@ -32,7 +33,13 @@ var MyQueue = function() {
  * @param {number} x
  * @return {void}
  */
-MyQueue.prototype.push = function(x) {
+MyQueue.prototype.push = function (x) {
+    this.st.push(x);
+    let stCopy = this.st.slice(0);
+    this.reSt = [];
+    while (stCopy.length) {
+        this.reSt.push(stCopy.pop());
+    }
 
 };
 
@@ -40,24 +47,32 @@ MyQueue.prototype.push = function(x) {
  * Removes the element from in front of queue and returns that element.
  * @return {number}
  */
-MyQueue.prototype.pop = function() {
-
+MyQueue.prototype.pop = function () {
+    let tmp = this.reSt.pop(),
+        stCopy = this.reSt.slice(0);
+    this.st = [];
+    while (stCopy.length) {
+        this.st.push(stCopy.pop());
+    }
+    return tmp;
 };
 
 /**
  * Get the front element.
  * @return {number}
  */
-MyQueue.prototype.peek = function() {
-
+MyQueue.prototype.peek = function () {
+    let tmp = this.reSt.pop();
+    this.reSt.push(tmp);
+    return tmp;
 };
 
 /**
  * Returns whether the queue is empty.
  * @return {boolean}
  */
-MyQueue.prototype.empty = function() {
-
+MyQueue.prototype.empty = function () {
+    return this.st.length === 0;
 };
 
 /**
@@ -68,3 +83,11 @@ MyQueue.prototype.empty = function() {
  * var param_3 = obj.peek()
  * var param_4 = obj.empty()
  */
+
+// ["MyQueue","push","pop","empty"]
+// [[],[1],[],[]]
+// [null,null,1,true]
+
+// ["MyQueue","push","push","peek","pop","empty"]
+// [[],[1],[2],[],[],[]]
+// [null,null,null,1,1,false]
