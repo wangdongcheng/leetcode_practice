@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-1388_pizza-with-3n-slices"
+            "program": "${workspaceFolder}/src/x-0394_decode-string"
     ]
 }
