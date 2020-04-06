@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0460_lfu-cache"
+            "program": "${workspaceFolder}/src/x-0072_edit-distance"
     ]
 }
