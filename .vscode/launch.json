@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0394_decode-string"
+            "program": "${workspaceFolder}/src/x-0460_lfu-cache"
     ]
 }

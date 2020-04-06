@@ -1,7 +1,21 @@
-const pow = (x, y) => {
-    return x << y;
+let m = new Map();
+m.set(1, "one");
+m.set(99, "ninty-nine");
+m.set(5, "five");
+m.set(23, "twenty-three");
+
+console.log(m);
+
+let arr = Array.from(m.keys());
+console.log(arr);
+arr.sort();
+for ([k, v] of m) {
+    if (k === 5) {
+        v = 'not five';
+        break;
+    }
+    console.log(k + "=-=" + v);
 }
 
-console.log(Number.MIN_SAFE_INTEGER);
-
-[37,52,38,77,32,61,56,79,59,68,69,33,96,35,44,71,55,98,92,34,92,82,72,90,56,67,68,46,94,52,38,80,43]
+ arr = [1,11,2];
+console.log(arr.sort());
