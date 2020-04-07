@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0841_keys-and-rooms"
+            "program": "${workspaceFolder}/_todo/x-1402_reducing-dishes"
     ]
 }
