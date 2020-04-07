@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/x-0072_edit-distance"
+            "program": "${workspaceFolder}/src/x-0841_keys-and-rooms"
     ]
 }

@@ -42,7 +42,6 @@
  */
 var rotate = function (matrix) {
     const len = matrix.length;
-    let tmp = 0;
 
     for (let i = len - 1; i >= 0; i--) {
         for (let j = 0; j < len; j++) {
