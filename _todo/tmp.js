@@ -12,5 +12,26 @@ const delFromSet = (s, arr) => {
         }
     })
 }
-delFromSet(s, [2, 3]);
-console.log(s);
+
+let arr = [
+    {
+        char: "a",
+        qty: 3
+    }, {
+        char: "b",
+        qty: 1
+    }, {
+        char: "c",
+        qty: 5
+    }
+];
+let str = "";
+arr.sort((objA, objB) => objB.qty - objA.qty);
+str += arr[0].char;
+arr[0].qty  = 99;
+console.log(str,arr);
+
+str = "abcdef";
+let i = 2;
+str = str.substr(0,3) + "z" + str.substr(3,6);
+console.log(str);
