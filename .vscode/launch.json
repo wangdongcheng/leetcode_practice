@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/x-1402_reducing-dishes"
+            "program": "${workspaceFolder}/_todo/intv_0013_ji-qi-ren-de-yun-dong-fan-wei-lcof"
     ]
 }
