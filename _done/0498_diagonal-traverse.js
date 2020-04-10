@@ -24,22 +24,25 @@ const log = (obj) => {
  * @return {number[]}
  */
 var findDiagonalOrder = function (matrix) {
+    if (matrix.length === 0 || matrix[0].length === 0) return [];
     const m = matrix.length;
     const n = matrix[0].length;
     const sum = m + n - 2;
     let arr = [];
     for (let i = 0; i <= sum; i++) {
         if (i % 2 === 0) {
-            for (let j = Math.min(i, m - 1); j >= 0; j--) {
-                if (i - j >= n) continue;
+            for (let j = i; j >= 0; j--) {
+                if (j >= m || i - j >= n) {
+                    continue;
+                }
                 arr.push(matrix[j][i - j]);
-                log(matrix[j][i - j]);
             }
         } else {
-            for (let j = 0; j <= Math.min(i, n - 1); j++) {
-                if (j >= m) continue;
-                arr.push(matrix[j][Math.min(i, n - 1) - j]);
-                log(matrix[j][i - j]);
+            for (let j = 0; j <= i; j++) {
+                if (j >= m || i - j >= n) {
+                    continue;
+                }
+                arr.push(matrix[j][i - j]);
             }
         }
     }
@@ -64,3 +67,8 @@ console.log(findDiagonalOrder([
     [22, 33],
     [44, 55]
 ]), [1, 2, 3, 11, 4, 5, 22, 44, 33, 55]);
+
+console.log(findDiagonalOrder([[1], [2], [3], [4]]));
+console.log(findDiagonalOrder([[2, 3]]), [2, 3]);
+console.log(findDiagonalOrder([]), []);
+console.log(findDiagonalOrder([[]]), []);
