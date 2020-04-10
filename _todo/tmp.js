@@ -1,4 +1,5 @@
-let str = "abc   bcd edf";
-let arr = str.split(" ");
-console.log(arr);
+let str = "111000";
 
+let arr = str.split("");
+arr.forEach
+console.log(arr);
