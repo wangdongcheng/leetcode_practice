@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/x-1405_longest-happy-string"
+            "program": "${workspaceFolder}/_todo/0498_diagonal-traverse"
     ]
 }
