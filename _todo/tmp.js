@@ -1,5 +1,2 @@
-let str = "111000";
-
-let arr = str.split("");
-arr.forEach
-console.log(arr);
+let strArr = ["abb","bcc","cdd"];
+console.log(strArr[0][1]);

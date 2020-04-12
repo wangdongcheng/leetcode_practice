@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/intv_16.03_intersection-lcci"
+            "program": "${workspaceFolder}/_todo/0014_longest-common-prefix"
     ]
 }
