@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/0064_add-binary"
+            "program": "${workspaceFolder}/_todo/intv_16.03_intersection-lcci"
     ]
 }
