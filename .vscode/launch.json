@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/0014_longest-common-prefix"
+            "program": "${workspaceFolder}/_todo/0355_design-twitter"
     ]
 }
