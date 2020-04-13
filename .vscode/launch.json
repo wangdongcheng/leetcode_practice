@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/0355_design-twitter"
+            "program": "${workspaceFolder}/_todo/0485_max-consecutive-ones"
     ]
 }
