@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/0445_add-two-numbers-ii"
+            "program": "${workspaceFolder}/_todo/0209_minimum-size-subarray-sum"
     ]
 }

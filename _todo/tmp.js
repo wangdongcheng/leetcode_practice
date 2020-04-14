@@ -1,2 +1,4 @@
-let arr = [1,2,3];
-console.log(arr.slice(1));
+let a = 5;
+let b = 4;
+[a,b] = [b,a];
+console.log(a,b);
