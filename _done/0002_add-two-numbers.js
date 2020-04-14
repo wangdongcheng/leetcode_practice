@@ -37,8 +37,8 @@ let getListFromArray = (a) => {
 let sumTwoArray = (arr1, arr2) => {
     let longLen = arr1.length > arr2.length ? arr1.length : arr2.length;
     let sum = 0,
-        remain = 0;
-    sumArr = [longLen];
+        remain = 0,
+        sumArr = [longLen];
 
     for (let i = 0; i < longLen; i++) {
         sum = (i < arr1.length ? arr1[i] : 0) + (i < arr2.length ? arr2[i] : 0) + remain;
@@ -67,4 +67,4 @@ var addTwoNumbers = function (l1, l2) {
 };
 
 console.log(sumTwoArray([2, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [5, 6, 4]).join() === [7, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2].join());
-console.log(sumTwoArray([5], [5]).join() === [0,1].join());
+console.log(sumTwoArray([5], [5]).join() === [0, 1].join());
