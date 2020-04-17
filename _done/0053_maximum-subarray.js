@@ -14,7 +14,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function (nums) {
+var maxSubArrayForceSearch = function (nums) {
     if (nums.length === 0) {
         return 0;
     } else if (nums.length === 1) {
@@ -35,9 +35,23 @@ var maxSubArray = function (nums) {
     return sum;
 };
 
+var maxSubArray = function (nums) {
+    if (nums.length === 1) {
+        return nums[0];
+    }
+
+    let max = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i - 1] > 0) {
+            nums[i] += nums[i - 1];
+        }
+        max = Math.max(max, nums[i]);
+    }
+    return max;
+}
+
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 'expect:', 6);
 console.log(maxSubArray([1]), 'expect:', 1);
 console.log(maxSubArray([-2, 1]), 'expect:', 1);
 console.log(maxSubArray([1, 2]), 'expect:', 3);
-debugger;
 console.log(maxSubArray([-2, -3, -1]), 'expect:', -1);
