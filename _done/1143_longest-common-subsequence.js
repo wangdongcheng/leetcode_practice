@@ -31,6 +31,29 @@
  * @param {string} text2
  * @return {number}
  */
-var longestCommonSubsequence = function(text1, text2) {
-    
+var longestCommonSubsequence = function (text1, text2) {
+    let dp = [];    // dp[i][j] means the LCS of the first i chars in text1 and first j chars in text2
+    const m = text1.length;  // i
+    const n = text2.length;  // j
+
+    for (let i = 0; i <= m; i++) {
+        let row = new Int32Array(n + 1);
+        dp.push(row);
+    }
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            let case1 = dp[i - 1][j];
+            let case2 = dp[i][j - 1];
+            let case3 = dp[i - 1][j - 1];
+            if (text1[i - 1] === text2[j - 1]) {
+                case3++;
+            }
+            dp[i][j] = Math.max(case1, case2, case3);
+        }
+    }
+    return dp[m][n];
 };
+
+console.log(longestCommonSubsequence("abcde", "ace"), 3);
+console.log(longestCommonSubsequence("abc", "abc"), 3);
+console.log(longestCommonSubsequence("abc", "def"), 0);

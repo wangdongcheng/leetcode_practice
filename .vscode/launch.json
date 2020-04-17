@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/0055_jump-game"
+            "program": "${workspaceFolder}/_todo/0120_triangle"
     ]
 }
