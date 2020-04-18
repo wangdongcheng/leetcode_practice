@@ -11,11 +11,12 @@
 // Input: [1,8,6,2,5,4,8,3,7]
 // Output: 49
 
+// tag: 双指针
 /**
  * @param {number[]} height
  * @return {number}
  */
-var maxArea = function (height) {
+var maxAreaForceSearch = function (height) {
     let max = 0;
     for (let i = 0; i < height.length - 1; i++) {
         for (let j = i + 1; j < height.length; j++) {
@@ -24,5 +25,20 @@ var maxArea = function (height) {
     }
     return max;
 };
+
+const maxArea = height => {
+    let max = 0;
+    let i = 0;
+    let j = height.length;
+    while (i != j - 1) {
+        if (height[i] <= height[j]) {
+            i++;
+        } else {
+            j--;
+        }
+        max = Math.max(max, (j - i) * Math.min(height[i], height[j]));
+    }
+    return max;
+}
 
 console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
