@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/0152_maximum-product-subarray"
+            "program": "${workspaceFolder}/_todo/5390"
     ]
 }

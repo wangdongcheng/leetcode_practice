@@ -1,2 +1,4 @@
-let arr = [-2,-3,-4];
-console.log(Math.min(...arr));
+let str = "abca";
+
+str = str.replace("a","");
+console.log(str);

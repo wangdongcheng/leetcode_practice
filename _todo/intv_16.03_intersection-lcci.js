@@ -25,6 +25,8 @@
 // The absolute value of coordinate value will not exceed 2^7.
 // All coordinates are valid 2D coordinates.
 
+// tags: has bug, currently leetcode no enough test cases to cover
+
 /**
  * @param {number[]} start1
  * @param {number[]} end1
