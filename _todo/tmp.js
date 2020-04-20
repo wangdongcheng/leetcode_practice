@@ -1,5 +1,3 @@
-let frogs = [];
-for (let i = 0; i < 5; i++) {
-    frogs.push([]);
-}
-console.log(frogs);
+let frogs = [1,2,3,4,5];
+
+console.log(frogs.pop());
