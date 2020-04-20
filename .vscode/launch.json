@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/5390"
+            "program": "${workspaceFolder}/_todo/0543_diameter-of-binary-tree"
     ]
 }
