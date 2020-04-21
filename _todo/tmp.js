@@ -1,3 +1,3 @@
-let frogs = [1,2,3,4,5];
-
-console.log(frogs.pop());
+let a = 3235236324;
+let b = 12;
+console.log(a >> b);
