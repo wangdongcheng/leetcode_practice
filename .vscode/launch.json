@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_todo/0029_divide-two-integers"
+            "program": "${workspaceFolder}/_trying/0912_sort-an-array"
     ]
 }

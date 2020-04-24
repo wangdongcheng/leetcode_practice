@@ -43,7 +43,7 @@ var findMinFibonacciNumbers_TLE = function (k) {
         if (fib[a] >= k) {
             break;
         }
-        a++
+        a++;
     }
     fib.shift();
     let dp = new Int32Array(k + 1);
@@ -69,7 +69,7 @@ const findMinFibonacciNumbers = k => {
         if (fib[i] >= k) {
             break;
         }
-        i++
+        i++;
     }
     let qty = 1;
     for (let i = fib.length - 1; i >= 0; i--) {
