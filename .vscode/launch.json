@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0160_intersection-of-two-linked-lists"
+            "program": "${workspaceFolder}/_trying/0019_remove-nth-node-from-end-of-list"
     ]
 }
