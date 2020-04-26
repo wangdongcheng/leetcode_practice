@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0912_sort-an-array"
+            "program": "${workspaceFolder}/_trying/0160_intersection-of-two-linked-lists"
     ]
 }
