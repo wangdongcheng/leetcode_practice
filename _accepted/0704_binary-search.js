@@ -43,3 +43,4 @@ console.log(search([-1, 0, 3, 5, 9, 12], 9), 4);
 console.log(search([-1, 0, 3, 5, 9, 12], 2), -1);
 console.log(search([-99, -87, -6, 0, 1, 3, 4, 5, 6, 7, 88], 0), 3);
 console.log(search([5], 5), 0);
+console.log(search([5], 3), -1);

@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0019_remove-nth-node-from-end-of-list"
+            "program": "${workspaceFolder}/_trying/0033_search-in-rotated-sorted-array"
     ]
 }
