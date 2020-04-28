@@ -1,6 +1,3 @@
-const test = arr =>{
-    arr.push("end");
-    return arr;
-}
+let i = -237;
 
-console.log(test(["abc","bcd"]));
+console.log(Math.abs(i));
