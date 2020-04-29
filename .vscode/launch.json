@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0203_remove-linked-list-elements"
+            "program": "${workspaceFolder}/_trying/0202_happy-number"
     ]
 }

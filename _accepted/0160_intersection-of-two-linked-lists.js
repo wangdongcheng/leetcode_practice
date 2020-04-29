@@ -58,7 +58,7 @@ const ln = require("../module/list");
  * @param {ListNode} headB
  * @return {ListNode}
  */
-var getIntersectionNodeForceSearch = function (headA, headB) { // 暴力遍历
+var getIntersectionNodeForceSearch = function (headA, headB) { // 暴力遍历, 2352 ms, 42.8 MB
     const copyB = headB;
     while (headA) {
         while (headB) {
@@ -73,7 +73,7 @@ var getIntersectionNodeForceSearch = function (headA, headB) { // 暴力遍历
     return null;
 };
 
-const getIntersectionNode = (headA, headB) => { // double-pointers, brilliant!
+const getIntersectionNode = (headA, headB) => { // double-pointers, brilliant! 96 ms, 42.8 MB
     const copyA = headA;
     const copyB = headB;
     while (headA != headB) {
