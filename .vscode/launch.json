@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0202_happy-number"
+            "program": "${workspaceFolder}/_trying/0234_palindrome-linked-list"
     ]
 }
