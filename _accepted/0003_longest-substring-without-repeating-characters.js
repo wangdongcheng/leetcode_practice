@@ -18,49 +18,40 @@
 // Explanation: The answer is "wke", with the length of 3. 
 //              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
+// tags: 滑动窗口
 
 /**
  * @param {string} s
  * @return {number}
- */    
+ */
 
-var lengthOfLongestSubstring = function(s) {
-    if(s.length<2){
+var lengthOfLongestSubstring = function (s) {
+    if (s.length < 2) {
         return s.length;
     }
-
-    var str = "";
-    str = str + s[0];
-    var count = 0;
-
-    debugger;
-
-    for(let i=1;i<s.length;i++){
-        var idx = str.indexOf(s[i]);
-        if(idx != -1){
-            // console.log('found',s[i],'in',str);
-            if(str.length > count){
-                count = str.length;
+    let sub = new Set();
+    let ret = 0;
+    let i = j = 0;
+    while (i < s.length) {
+        while (j < s.length) {
+            if (!sub.has(s[j])) {
+                sub.add(s[j]);
+                ret = Math.max(ret, sub.size);
+            } else {
+                sub.delete(s[i]);
+                break;
             }
-            str = str.substring(idx+1,str.length)+s[i];
-            // console.log('now str is',str);
-        }else{
-            str = str+s[i];
-            // console.log(output);
+            j++;
         }
-    };
-    var len = str.length;
-    if(len > count){
-        return len;
-        }
-    return count;
+        i++;
+    }
+    return ret;
 };
 
-// console.log('pw'.substring(2,2)+'w');
 console.log("pwwkew", lengthOfLongestSubstring("pwwkew") === 3 ? 'passed' : 'failed');
-console.log("abcabcbb", lengthOfLongestSubstring("abcabcbb") === 3 ? 'passed': 'failed');
-console.log("bbbbb", lengthOfLongestSubstring("bbbbb") === 1 ? 'passed': 'failed');
-console.log("abcabcbb",lengthOfLongestSubstring("abcabcbb") === 3 ? 'passed': 'failed');
-console.log(" ",lengthOfLongestSubstring(" ") === 1 ? 'passed': 'failed');
-console.log("",lengthOfLongestSubstring("") === 0 ? 'passed': 'failed');
-console.log("au",lengthOfLongestSubstring("au") === 2 ? 'passed': 'failed');
+console.log("abcabcbb", lengthOfLongestSubstring("abcabcbb") === 3 ? 'passed' : 'failed');
+console.log("bbbbb", lengthOfLongestSubstring("bbbbb") === 1 ? 'passed' : 'failed');
+console.log("abcabcbb", lengthOfLongestSubstring("abcabcbb") === 3 ? 'passed' : 'failed');
+console.log(" ", lengthOfLongestSubstring(" ") === 1 ? 'passed' : 'failed');
+console.log("", lengthOfLongestSubstring("") === 0 ? 'passed' : 'failed');
+console.log("au", lengthOfLongestSubstring("au") === 2 ? 'passed' : 'failed');

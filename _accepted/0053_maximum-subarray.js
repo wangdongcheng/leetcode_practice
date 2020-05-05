@@ -23,13 +23,10 @@ var maxSubArrayForceSearch = function (nums) {
         return Math.max(nums[0] + nums[1], nums[0], nums[1]);
     }
 
-    let sum = nums[0],
-        it = 0;
-
+    let sum = nums[0];
     for (let i = 0; i < nums.length; i++) {
-        it = nums[i];
         for (let j = i + 1; j < nums.length; j++) {
-            sum = Math.max(it, sum, it += nums[j], nums[j]);
+            sum = Math.max(nums[i], sum, nums[i] += nums[j], nums[j]);
         }
     }
     return sum;
