@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_accepted/0003_longest-substring-without-repeating-characters"
+            "program": "${workspaceFolder}/_trying/0572_subtree-of-another-tree"
     ]
 }
