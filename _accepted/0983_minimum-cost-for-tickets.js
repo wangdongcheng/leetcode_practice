@@ -38,11 +38,33 @@
 // costs.length == 3
 // 1 <= costs[i] <= 1000
 
+// tags: 动态规划
+
 /**
  * @param {number[]} days
  * @param {number[]} costs
  * @return {number}
  */
-var mincostTickets = function(days, costs) {
-
+var mincostTickets = function (days, costs) {
+    const len = days.length;
+    let dp = new Array(days[len - 1] + 1);
+    const day1 = Math.min(...costs);  // in case 7-day ticket or 30-day ticket is cheaper than 1-day ticket
+    dp[0] = 0;
+    for (let i = 1; i < dp.length; i++) {
+        if (days.includes(i)) {
+            let base = dp[i - 1] + day1;
+            dp[i] = Math.min(base, (i >= 7 ? dp[i - 7] : 0) + costs[1], (i >= 30 ? dp[i - 30] : 0) + costs[2]);
+        } else {
+            dp[i] = dp[i - 1];
+        }
+    }
+    return dp.pop();
 };
+
+const test = (days, costs, ans) => {
+    console.log(mincostTickets(days, costs), ans);
+}
+
+test([1, 4, 6, 7, 8, 20], [2, 7, 15], 11);
+test([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31], [2, 7, 15], 17);
+test([1, 2, 3, 4, 6, 8, 9, 10, 13, 14, 16, 17, 19, 21, 24, 26, 27, 28, 29], [3, 14, 50], 50);

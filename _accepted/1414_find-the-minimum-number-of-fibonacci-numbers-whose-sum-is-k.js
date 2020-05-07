@@ -27,7 +27,7 @@
 // Constraints:
 // 1 <= k <= 10^9
 
-// tags: need_to_understand_more
+// tags: need to understand more;
 
 /**
  * @param {number} k

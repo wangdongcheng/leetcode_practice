@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0572_subtree-of-another-tree"
+            "program": "${workspaceFolder}/_trying/0983_minimum-cost-for-tickets"
     ]
 }
