@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0983_minimum-cost-for-tickets"
+            "program": "${workspaceFolder}/_trying/0221_maximal-square"
     ]
 }
