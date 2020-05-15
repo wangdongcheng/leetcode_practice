@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0221_maximal-square"
+            "program": "${workspaceFolder}/_trying/0560_subarray-sum-equals-k"
     ]
 }
