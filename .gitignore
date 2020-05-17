@@ -1,1 +1,5 @@
 .vscode/launch.json
+
+# npm install jquery
+# npm install jsdom
+node_modules/**
