@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0560_subarray-sum-equals-k"
+            "program": "${workspaceFolder}/_trying/0680_valid-palindrome-ii"
     ]
 }
