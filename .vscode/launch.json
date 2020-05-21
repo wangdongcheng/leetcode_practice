@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0680_valid-palindrome-ii"
+            "program": "${workspaceFolder}/_trying/0005_longest-palindromic-substring"
     ]
 }
