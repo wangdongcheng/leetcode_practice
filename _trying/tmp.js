@@ -1,7 +1,7 @@
-let obj = {};
-obj["a"] = 0;
-obj["b"] = 1;
-console.log(obj);
-if (!obj["c"]) {
-    console.log("not exist");
-}
+let m = new Map();
+m.set(1,"a");
+m.set(2,"b");
+m.set(3,"c");
+m.set(4,"d");
+m.set(26,"z");
+console.log(m.keys().next().value);

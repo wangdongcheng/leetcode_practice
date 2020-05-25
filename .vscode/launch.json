@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0005_longest-palindromic-substring"
+            "program": "${workspaceFolder}/_trying/0076_minimum-window-substring"
     ]
 }
