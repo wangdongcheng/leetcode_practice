@@ -1,7 +1,3 @@
-let m = new Map();
-m.set(1,"a");
-m.set(2,"b");
-m.set(3,"c");
-m.set(4,"d");
-m.set(26,"z");
-console.log(m.keys().next().value);
+let arr = [0,1,2,3,4,5,6];
+console.log(arr.slice(3));
+console.log(arr.slice(2,4));
