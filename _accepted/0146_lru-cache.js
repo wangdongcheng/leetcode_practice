@@ -23,7 +23,8 @@
 // cache.get(3);       // returns 3
 // cache.get(4);       // returns 4
 
-// tags: The Map object holds key-value pairs and remembers the original insertion order of the keys;
+// tags: The Map object holds key-value pairs and remembers the original insertion order of the keys 
+// (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#Description)
 
 /**
  * @param {number} capacity
