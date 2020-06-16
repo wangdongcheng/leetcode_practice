@@ -5,7 +5,7 @@
 
 // Note: The length of temperatures will be in the range [1, 30000]. Each temperature will be an integer in the range [30, 100].
 
-// tags: stack
+// tags: 单调栈; stack
 
 /**
  * @param {number[]} T

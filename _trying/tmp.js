@@ -1,7 +1,1 @@
-const obj = {
-    show: function(){
-        console.log(this);
-    }
-}
-
-obj.show();
+console.log(eval("2 + 2"));             // returns 4
