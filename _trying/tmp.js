@@ -1,1 +1,4 @@
-console.log(eval("2 + 2"));             // returns 4
+let str = "";
+str += "a";
+str += "c";
+console.log(str);

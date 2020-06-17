@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0015_3sum"
+            "program": "${workspaceFolder}/_trying/1028_recover-a-tree-from-preorder-traversal"
     ]
 }
