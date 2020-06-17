@@ -45,7 +45,6 @@ const maxScoreSightseeingPair = A => { // A[i]+i + (A[j] - j)
     return ret;
 };
 
-
 console.log(maxScoreSightseeingPair([8, 1, 5, 2, 6]), 11);
 const long = require("../json_test_case/1014_best-sightseeing-pair.json");
 console.log(maxScoreSightseeingPair(long[0]), 1);
