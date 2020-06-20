@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/1028_recover-a-tree-from-preorder-traversal"
+            "program": "${workspaceFolder}/_trying/0044_wildcard-matching"
     ]
 }
