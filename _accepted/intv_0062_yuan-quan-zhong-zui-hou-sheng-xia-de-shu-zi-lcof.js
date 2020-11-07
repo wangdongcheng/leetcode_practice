@@ -22,7 +22,7 @@
  * @param {number} m
  * @return {number}
  */
-var lastRemaining = function (n, m) {
+var lastRemainingForce = function (n, m) {
     if (m === 1) return n - 1;
 
     let arr = [],
@@ -50,18 +50,6 @@ var lastRemaining = function (n, m) {
     return arr[0];
 };
 
-console.log(lastRemaining(5, 1), 4);
-console.log(lastRemaining(4, 4), 1);
-console.log(lastRemaining(99, 99), 88);
-console.log(lastRemaining(100, 99), 87);
-console.log(lastRemaining(22, 22), 6)
-console.log(lastRemaining(5, 3), 3);
-console.log(lastRemaining(7, 4), 1);
-console.log(lastRemaining(4, 6), 2);
-console.log(lastRemaining(10, 17), 2);
-console.log(lastRemaining(1000, 999), 333);
-
-
 // the fastest js sample, 60ms.
 // It has been proven by math that:
 // 约瑟夫问题（有时也称为约瑟夫斯置换），是一个出现在计算机科学和数学中的问题。在计算机编程的算法中，类似问题又称为约瑟夫环。
@@ -73,10 +61,22 @@ console.log(lastRemaining(1000, 999), 333);
  */
 
 // f(n) = f(n - 1) + m  %n
-var lastRemaining = function(n, m) {
+var lastRemaining = function (n, m) {
     let res = 0; // f(1) = 0;
-    for(let i = 2; i <= n; i++){
+    for (let i = 2; i <= n; i++) {
         res = (res + m) % i;
     }
     return res;
 };
+
+console.log(lastRemaining(5, 1), 4);
+console.log(lastRemaining(4, 4), 1);
+console.log(lastRemaining(99, 99), 88);
+console.log(lastRemaining(100, 99), 87);
+console.log(lastRemaining(22, 22), 6)
+console.log(lastRemaining(5, 3), 3);
+console.log(lastRemaining(7, 4), 1);
+console.log(lastRemaining(4, 6), 2);
+console.log(lastRemaining(10, 17), 2);
+console.log(lastRemaining(99, 2), 70);
+console.log(lastRemaining(1000, 999), 333);
