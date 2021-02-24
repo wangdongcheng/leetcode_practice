@@ -11,6 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/_trying/0941_valid-mountain-array"
+            "program": "${workspaceFolder}/module/file"
     ]
 }
